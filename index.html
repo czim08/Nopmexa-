@@ -3,115 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOPMEXA | Innovación en Retención Hídrica</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>NOPMEXA | Innovación AgriTech de Nueva Generación</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2b4c3b;
-            --secondary-color: #f8fbf9;
-            --accent-color: #4a8060;
-            --text-dark: #1a1a1a;
-            --text-light: #ffffff;
-            --font-main: 'Inter', sans-serif;
+            --primary: #1e3a2a; /* Verde corporativo profundo */
+            --accent: #65a30d; /* Verde lima tecnológico */
+            --bg: #ffffff;
+            --text-main: #334155;
+            --text-muted: #64748b;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-main); color: var(--text-dark); background-color: var(--text-light); line-height: 1.7; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-main); line-height: 1.8; background: var(--bg); }
 
-        /* Navegación */
-        nav { position: fixed; width: 100%; padding: 20px 5%; background: rgba(255,255,255,0.98); z-index: 1000; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-        .logo-container { display: flex; align-items: center; gap: 15px; }
-        .logo-container img { height: 45px; }
+        /* Navbar */
+        nav { padding: 30px 10%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; background: rgba(255,255,255,0.95); z-index: 1000; border-bottom: 1px solid #e2e8f0; }
+        .logo { font-weight: 900; font-size: 1.8rem; color: var(--primary); letter-spacing: -1px; }
 
         /* Hero */
-        .hero { height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 10%; background: linear-gradient(rgba(43, 76, 59, 0.8), rgba(43, 76, 59, 0.8)), url('https://images.unsplash.com/photo-1523348837708-15d4a09cfacb?q=80&w=2000'); background-size: cover; background-position: center; color: white; }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+        .hero { padding: 120px 10%; background: linear-gradient(rgba(30, 58, 42, 0.9), rgba(30, 58, 42, 0.9)), url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=2000'); background-size: cover; color: white; text-align: center; }
+        .hero h1 { font-size: 4.5rem; margin-bottom: 20px; line-height: 1.1; }
 
         /* Secciones */
-        .section { padding: 100px 10%; }
-        .section-title { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 40px; text-align: center; }
-        
-        /* Grid de contenido */
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .card { padding: 40px; background: var(--secondary-color); border-radius: 15px; border-left: 5px solid var(--accent-color); transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+        section { padding: 100px 10%; }
+        .section-header { margin-bottom: 60px; }
+        .section-header h2 { font-size: 3rem; color: var(--primary); margin-bottom: 15px; }
 
-        /* Tecnología */
-        .tech-highlight { background: var(--primary-color); color: white; padding: 80px 10%; }
-        .tech-grid { display: flex; gap: 50px; align-items: center; flex-wrap: wrap; }
-        .tech-text { flex: 1; min-width: 300px; }
+        /* Ingeniería Section */
+        .engineering-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .tech-box { background: #f8fafc; padding: 40px; border-radius: 20px; border-left: 6px solid var(--accent); }
+        .tech-img { width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
 
-        footer { background: #111; color: #ccc; padding: 50px 10%; text-align: center; }
+        /* Beneficios */
+        .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .benefit-item { padding: 30px; background: white; border: 1px solid #e2e8f0; border-radius: 16px; transition: 0.3s; }
+        .benefit-item:hover { border-color: var(--accent); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+        /* Stats */
+        .stats-bar { display: flex; justify-content: space-between; padding: 60px 10%; background: var(--primary); color: white; border-radius: 0; }
+        .stat { text-align: center; }
+        .stat span { display: block; font-size: 3rem; font-weight: 700; color: var(--accent); }
+
+        footer { padding: 80px 10%; background: #0f172a; color: #94a3b8; text-align: center; }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo-container">
-            <img src="https://i.ibb.co/cdS1qDS/Screenshot-2026-06-22-19-01-27-09-6012fa4d4ddec268fc5c7112cbb265e7-2.jpg" alt="Logo">
-            <span style="font-weight: 800; font-size: 1.5rem; color: var(--primary-color);">NOPMEXA</span>
-        </div>
+        <div class="logo">NOPMEXA</div>
+        <div style="font-weight: 600;">Ciencias del Nopal 2026</div>
     </nav>
 
     <header class="hero">
-        <h1>Innovación AgriTech de Alto Impacto</h1>
-        <p style="font-size: 1.5rem;">Transformando el futuro hídrico global a través de la ciencia del nopal.</p>
+        <h1>Ingeniería Hídrica Regenerativa</h1>
+        <p style="font-size: 1.4rem; max-width: 700px; margin: 0 auto;">NOPACAPS: La respuesta biotecnológica a la escasez hídrica. Transformando el campo con ciencia de materiales orgánica.</p>
     </header>
 
-    <section class="section">
-        <h2 class="section-title">La Problemática Hídrica</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>Crisis Global</h3>
-                <p>La agricultura consume el 70% del agua dulce mundial. Estamos ante una escasez crítica que amenaza la seguridad alimentaria.</p>
-            </div>
-            <div class="card">
-                <h3>Dependencia Química</h3>
-                <p>El uso de polímeros sintéticos derivados del petróleo degrada los suelos a largo plazo y contamina mantos acuíferos.</p>
-            </div>
-            <div class="card">
-                <h3>Erosión del Suelo</h3>
-                <p>La falta de retención de humedad acelera la degradación física y la pérdida de nutrientes en las tierras de cultivo.</p>
-            </div>
+    <section>
+        <div class="section-header" style="text-align: center;">
+            <h2>Ingeniería de Transición de Fase</h2>
+            <p>El estándar técnico que nos diferencia de los polímeros sintéticos.</p>
         </div>
-    </section>
-
-    <section class="tech-highlight">
-        <h2 class="section-title" style="color: white;">Nuestra Solución: Retenedor Líquido y Encapsulado</h2>
-        <div class="tech-grid">
-            <div class="tech-text">
-                <h3>Aplicación Versátil</h3>
-                <p>NOPACAPS inicia como una <strong>solución líquida de alta fluidez</strong>. Esto permite que sea aplicada mediante sistemas de riego convencionales (goteo, aspersión) sin necesidad de maquinaria costosa.</p>
+        <div class="engineering-grid">
+            <div>
+                <img src="https://images.unsplash.com/photo-1574943320219-555621f3791e?q=80&w=1000" class="tech-img" alt="Tecnología">
+            </div>
+            <div class="tech-box">
+                <h3 style="margin-bottom: 20px; color: var(--primary);">Solución Líquida -> Matriz Sólida</h3>
+                <p>Nuestra innovación radica en la **gelificación iónica controlada**. NOPACAPS se introduce al sistema de riego como un fluido de baja viscosidad, garantizando una distribución homogénea en la red de tuberías de riego por goteo sin riesgo de obstrucción.</p>
                 <br>
-                <h3>Transición de Fase</h3>
-                <p>Una vez en contacto con el suelo y tras el proceso de gelificación iónica, el retenedor líquido se transforma en una microestructura sólida y robusta. Esta cápsula libera la humedad de manera controlada y constante directamente a la raíz.</p>
+                <p>Una vez en contacto con el rizoma, el producto reacciona con los cationes presentes en la estructura mineral del suelo, iniciando una <strong>transición de fase polimérica</strong>. El resultado es una micro-cápsula que se adhiere a la raíz, optimizando la capacidad de campo y reduciendo la lixiviación del fertilizante en un 40%.</p>
             </div>
-            <img src="https://images.unsplash.com/photo-1574943320219-555621f3791e?w=600" style="border-radius: 20px; flex: 1; min-width: 300px;">
         </div>
     </section>
 
-    <section class="section">
-        <h2 class="section-title">Modelo de Negocio y Escalabilidad</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">No solo vendemos un producto; ofrecemos un modelo agro-industrial integrado.</p>
-        <div class="grid-3">
-            <div class="card">
-                <h3>Agricultura por Contrato</h3>
-                <p>Vinculamos a los productores con mercados de alta demanda, asegurando rentabilidad desde la primera cosecha.</p>
+    <section style="background: #f1f5f9;">
+        <div class="section-header">
+            <h2>Propuestas de Valor</h2>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <h3>Hidratación Reactiva</h3>
+                <p>Capacidad de absorción de agua hasta 200 veces su peso seco, liberándola únicamente cuando la presión osmótica de la raíz lo demanda.</p>
             </div>
-            <div class="card">
-                <h3>Impacto Ambiental</h3>
-                <p>Regeneramos suelos mediante la incorporación orgánica, mejorando la calidad de la tierra año tras año.</p>
+            <div class="benefit-item">
+                <h3>Arquitectura de Suelo</h3>
+                <p>Mejora la porosidad de suelos arcillosos y la cohesión de suelos arenosos, permitiendo una aireación radicular superior.</p>
             </div>
-            <div class="card">
-                <h3>Escalabilidad</h3>
-                <p>Tecnología modular adaptable a cultivos intensivos y de traspatio, con bajo costo de producción comparado con polímeros importados.</p>
+            <div class="benefit-item">
+                <h3>Bio-Degradabilidad</h3>
+                <p>A diferencia de los hidrogeles basados en poliacrilamida, nuestra matriz orgánica se reincorpora al ciclo de carbono del suelo tras 18 meses.</p>
             </div>
         </div>
     </section>
+
+    <div class="stats-bar">
+        <div class="stat"><span>-65%</span> Uso de Agua</div>
+        <div class="stat"><span>+30%</span> Rendimiento</div>
+        <div class="stat"><span>100%</span> Orgánico</div>
+    </div>
 
     <footer>
-        <p>NOPMEXA - CIENCIAS DEL NOPAL | Conalep La Piedad</p>
-        <p style="margin-top: 10px;">Proyecto de Innovación Tecnológica 2026</p>
+        <p>&copy; 2026 NOPMEXA Technologies. División de Investigación y Desarrollo Agrícola.</p>
     </footer>
 
 </body>
