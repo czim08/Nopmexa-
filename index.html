@@ -3,116 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOPMEXA | NOPACAPS Liquid Solution</title>
+    <title>NOPMEXA | Corporate AgriTech & Biopolymer Research</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --brand-primary: #0f3d2a;
-            --brand-accent: #8cc63f;
-            --brand-text: #1e293b;
-            --white: #ffffff;
+            --deep-green: #052e16;
+            --tech-green: #16a34a;
+            --light-bg: #f8fafc;
+            --text-dark: #0f172a;
+            --gray-border: #e2e8f0;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--brand-text); line-height: 1.6; background-color: #f8fafc; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-dark); background-color: var(--light-bg); line-height: 1.8; }
+        
+        /* Layout */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+        section { padding: 120px 0; border-bottom: 1px solid var(--gray-border); }
+        
+        /* Hero */
+        .hero { background: var(--deep-green); color: white; padding: 160px 0; text-align: center; }
+        .hero h1 { font-size: 5rem; font-weight: 900; margin-bottom: 20px; letter-spacing: -2px; }
+        .hero p { font-size: 1.5rem; color: #a3e635; max-width: 800px; margin: 0 auto; }
 
-        /* Navbar */
-        nav { padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; background: white; border-bottom: 1px solid #e2e8f0; }
-        .logo-box { display: flex; align-items: center; gap: 12px; }
-        .logo-box img { height: 45px; }
+        /* Timeline de R&D */
+        .timeline { border-left: 2px solid var(--tech-green); padding-left: 40px; margin-left: 20px; }
+        .tl-item { margin-bottom: 50px; position: relative; }
+        .tl-item::before { content: ""; position: absolute; left: -47px; top: 0; width: 15px; height: 15px; background: var(--tech-green); border-radius: 50%; }
 
-        /* Hero: Enfocado en el producto líquido */
-        .hero { padding: 80px 5%; background: linear-gradient(135deg, var(--brand-primary), #064e3b); color: white; text-align: center; }
-        .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; margin-bottom: 20px; }
-        .hero p { font-size: 1.25rem; max-width: 800px; margin: 0 auto 30px; opacity: 0.9; }
-        .btn-primary { padding: 15px 30px; background: var(--brand-accent); color: var(--brand-primary); font-weight: 800; border-radius: 8px; text-decoration: none; display: inline-block; }
+        /* Tabla comparativa */
+        table { width: 100%; border-collapse: collapse; margin-top: 40px; background: white; }
+        th, td { padding: 20px; text-align: left; border-bottom: 1px solid var(--gray-border); }
+        th { background: var(--deep-green); color: white; }
 
-        /* Section: El Producto Líquido */
-        .product-section { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
-        .flex-container { display: flex; flex-wrap: wrap; gap: 60px; align-items: center; }
-        .flex-item { flex: 1; min-width: 320px; }
-        .img-fluid { width: 100%; height: auto; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
-
-        /* Tech Details */
-        .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card { padding: 40px; background: white; border-radius: 16px; border: 1px solid #e2e8f0; }
-
-        footer { background: #020617; color: #94a3b8; padding: 60px 5%; text-align: center; }
+        /* Footer */
+        footer { background: #020617; color: #94a3b8; padding: 80px 0; }
+        .grid-footer { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo-box">
-            <img src="https://i.ibb.co/cdS1qDS/Screenshot-2026-06-22-19-01-27-09-6012fa4d4ddec268fc5c7112cbb265e7-2.jpg" alt="Logo NOPMEXA">
-            <span style="font-weight: 900; font-size: 1.4rem; color: var(--brand-primary);">NOPMEXA</span>
+    <header style="padding: 20px 0; background: white; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--gray-border);">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <h1 style="font-size: 1.5rem; color: var(--deep-green);">NOPMEXA RESEARCH</h1>
+            <div style="font-size: 0.9rem; font-weight: 600;">PORTAL DE INVERSIONISTAS | I+D | OPERACIONES</div>
         </div>
-        <div style="font-weight: 600;">Tecnología Hídrica</div>
-    </nav>
-
-    <header class="hero">
-        <span style="color: var(--brand-accent); text-transform: uppercase; letter-spacing: 2px; font-weight: 700;">Flagship Product</span>
-        <h1>NOPACAPS: Retenedor Líquido de Alto Flujo</h1>
-        <p>La revolución AgriTech que inicia en estado líquido. Diseñado para integrarse perfectamente en sistemas de riego industrial sin obstrucciones.</p>
-        <a href="#detalles" class="btn-primary">Ver Especificaciones Técnicas</a>
     </header>
 
-    <section class="product-section" id="detalles">
-        <div class="flex-container">
-            <div class="flex-item">
-                <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--brand-primary);">Ingeniería en Fase Líquida</h2>
-                <p style="font-size: 1.1rem; margin-bottom: 20px;">
-                    NOPACAPS no es un polvo ni un gel sólido que requiera maquinaria especial. Nuestra innovación es una **suspensión coloidal de alta fluidez** extraída del mucílago de nopal (Opuntia). 
-                </p>
-                <p>
-                    Su formato líquido permite una dosificación precisa mediante fertirrigación o riego por goteo convencional, garantizando que el retenedor llegue exactamente al bulbo de humedad radicular sin riesgo de taponamiento en las líneas de conducción.
-                </p>
-            </div>
-            <div class="flex-item">
-                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80" class="img-fluid" alt="Nopal Cultivo">
+    <section class="hero">
+        <div class="container">
+            <span style="text-transform: uppercase; letter-spacing: 4px; font-size: 0.9rem;">Empresa de Biotecnología Aplicada</span>
+            <h1>Liderazgo en Ciencia del Nopal</h1>
+            <p>Hemos dedicado 5 años a perfeccionar la molécula de retenedor hídrico líquido más avanzada del mercado. No es solo un producto, es una revolución en la arquitectura del suelo.</p>
+        </div>
+    </section>
+
+    <!-- R&D Timeline -->
+    <section>
+        <div class="container">
+            <h2>Ciclo de Desarrollo: 5 Años de Innovación</h2>
+            <div class="timeline" style="margin-top: 60px;">
+                <div class="tl-item">
+                    <h3>2021: Fase de Conceptualización y Aislamiento</h3>
+                    <p>Inicio de la investigación sobre las propiedades reológicas del mucílago de Opuntia. Identificación de los polímeros naturales clave para la retención hídrica.</p>
+                </div>
+                <div class="tl-item">
+                    <h3>2022: Estabilización de la Suspensión</h3>
+                    <p>Desarrollo de la fórmula líquida original. El reto fue evitar la degradación biológica acelerada mientras se mantenía la baja viscosidad para riego industrial.</p>
+                </div>
+                <div class="tl-item">
+                    <h3>2023: Pruebas de Estrés en Laboratorio</h3>
+                    <p>Sometimiento del compuesto a condiciones extremas de salinidad, temperatura y pH. Perfeccionamiento del proceso de gelificación iónica in-situ.</p>
+                </div>
+                <div class="tl-item">
+                    <h3>2024: Validación de Escalamiento Industrial</h3>
+                    <p>Pruebas en sistemas de riego por goteo de alta presión. Verificación de tasa de flujo y compatibilidad con maquinaria agrícola estándar.</p>
+                </div>
+                <div class="tl-item">
+                    <h3>2026: Despliegue y Patente de NOPACAPS</h3>
+                    <p>Lanzamiento oficial de la solución líquida a gran escala. Estandarización de calidad ISO para mercados internacionales.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section style="background: #edf2f7; padding: 80px 5%;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px;">¿Por qué la Versión Líquida Domina el Mercado?</h2>
-            <div class="tech-grid">
-                <div class="card">
-                    <h3>Compatibilidad Industrial</h3>
-                    <p>Integración total en sistemas de riego automatizados. Compatible con bombas dosificadoras estándar de la industria agropecuaria.</p>
-                </div>
-                <div class="card">
-                    <h3>Distribución Homogénea</h3>
-                    <p>Al ser líquido, se desplaza con el agua, asegurando que cada planta reciba la misma carga de retención hídrica.</p>
-                </div>
-                <div class="card">
-                    <h3>Activación In-Situ</h3>
-                    <p>El producto se "encapsula" únicamente al entrar en contacto con la matriz del suelo y los iones de la raíz, maximizando su vida útil.</p>
-                </div>
-            </div>
+    <!-- Technical Analysis -->
+    <section style="background: white;">
+        <div class="container">
+            <h2>Análisis de Competitividad Técnica</h2>
+            <p>NOPACAPS vs. Hidrogeles Sintéticos (Polímeros Derivados del Petróleo)</p>
+            <table>
+                <tr>
+                    <th>Característica</th>
+                    <th>NOPACAPS (Líquido)</th>
+                    <th>Polímeros Sintéticos</th>
+                </tr>
+                <tr>
+                    <td>Origen</td>
+                    <td>Orgánico (Nopal)</td>
+                    <td>Petroquímico</td>
+                </tr>
+                <tr>
+                    <td>Aplicación</td>
+                    <td>Sistema de Riego (Líquido)</td>
+                    <td>Granular (Manual/Mecánico)</td>
+                </tr>
+                <tr>
+                    <td>Degradación</td>
+                    <td>Natural (18 meses)</td>
+                    <td>Acumulativa (Tóxica)</td>
+                </tr>
+                <tr>
+                    <td>Eficiencia Hídrica</td>
+                    <td>Alta (Activación Osmótica)</td>
+                    <td>Variable</td>
+                </tr>
+            </table>
         </div>
     </section>
 
-    <section class="product-section">
-        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px;">Certificación de Biomateriales</h2>
-        <div class="flex-container">
-            <div class="flex-item">
-                <img src="https://images.unsplash.com/photo-1581092160607-ee22531fa71c?auto=format&fit=crop&w=800&q=80" class="img-fluid" alt="Laboratorio">
-            </div>
-            <div class="flex-item">
-                <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Estándares de Calidad Global</h3>
-                <p>Nuestra planta de procesamiento aplica rigurosos controles para asegurar la estabilidad química del polímero natural. El resultado es un producto líquido con una vida útil en anaquel de 24 meses, garantizando pureza y efectividad desde la primera aplicación hasta la última gota.</p>
-            </div>
+    <!-- Deep Dive -->
+    <section>
+        <div class="container">
+            <h2>El Core Tecnológico: La Suspensión Coloidal</h2>
+            <p>La versión líquida de NOPACAPS es nuestro activo más valioso. Hemos diseñado un sistema que permite transportar el principio activo (mucílago purificado) a través de los emisores de riego más estrechos sin riesgo de bloqueo.</p>
+            <br>
+            <p><strong>El Proceso de "Encapsulación Inteligente":</strong></p>
+            <ul style="margin-top: 20px; list-style: square; padding-left: 20px;">
+                <li><strong>Inyección:</strong> El fluido de baja viscosidad se integra en la red de fertirrigación.</li>
+                <li><strong>Movimiento:</strong> La solución se desplaza por capilaridad hasta el bulbo húmedo.</li>
+                <li><strong>Reacción:</strong> La interacción con los minerales del suelo dispara la transición de fase coloidal.</li>
+                <li><strong>Resultado:</strong> Una red de microrretenedores que liberan humedad bajo demanda de la raíz.</li>
+            </ul>
         </div>
     </section>
 
     <footer>
-        <p style="font-size: 1.5rem; font-weight: 700; margin-bottom: 10px;">NOPMEXA</p>
-        <p>Global Liquid AgriTech Solutions</p>
-        <p style="margin-top: 20px; font-size: 0.9rem;">&copy; 2026 Conalep La Piedad. Investigación en Ciencias del Nopal.</p>
+        <div class="container">
+            <div class="grid-footer">
+                <div>
+                    <h3>NOPMEXA</h3>
+                    <p>Corporativo Global. Desarrollo y transferencia de tecnología agrícola.</p>
+                </div>
+                <div>
+                    <h3>R&D</h3>
+                    <p>Laboratorios de Biotecnología Aplicada.</p>
+                </div>
+                <div>
+                    <h3>Mercados</h3>
+                    <p>América del Norte, Latam, Mercado Europeo (Expansión 2027).</p>
+                </div>
+                <div>
+                    <h3>Legal</h3>
+                    <p>Propiedad Intelectual y Patentes en trámite. 2026.</p>
+                </div>
+            </div>
+            <p style="margin-top: 60px; text-align: center;">© 2026 NOPMEXA Technologies. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
 </body>
-    </html>
-    
+</html>
